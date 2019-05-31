@@ -1,4 +1,3 @@
-// CODE here for your Lambda Classes
 //Class Person
 class Person {
 	constructor(attr){
@@ -14,21 +13,16 @@ class Person {
 
 //Class Student
 	class Student extends Person {
-		constructor(previousBackground, className, favSubjects) {
-			super(name, age, location);
-			this.previousBackground = previousBackground;
-			this.className = className;
-			this.favSubjects = favSubjects;
+		constructor(attr) {
+			super(attr);
+			this.previousBackground = attr.previousBackground;
+			this.className = attr.className;
+			this.favSubjects = attr.favSubjects;
 		}
 
 		listsSubjects() {
-
-			console.log(`This is a list of ${this.name}'s favorite subjects.`);
-			let subArray = [];
-			let item = 0;
-			subArray = this.favSubjects;
-			for(item in subArray) {
-				console.log(`subject: ${subArray[item]}`);
+			for (let i = 0; i<this.favSubjects.length; i++);{
+			console.log(`This is a list of ${this.favSubjects[i]}'s favorite subjects.`);
 			}
 
 		}
@@ -54,11 +48,11 @@ class Person {
 
 //Class Instructor
 	class Instructor extends Person {
-		constructor(specialty, favLanguage, catchPhrase){
-			super(name,age,location);
-			this.specialty = specialty;
-			this.favLanguage = favLanguage;
-			this.catchPhrase = catchPhrase;
+		constructor(attr){
+			super(attr);
+			this.specialty = attr.specialty;
+			this.favLanguage = attr.favLanguage;
+			this.catchPhrase = attr.catchPhrase;
 		}
 
 		demo(subject) {
@@ -80,10 +74,10 @@ class Person {
 
 	// Project Manager
 	class ProjectManager extends Person {
-		constructor(personAttributes) {
-			super(personAttributes);
-			this.gradClassName = personAttributes.gradClassName;
-			this.favInstructor = personAttributes.favInstructor;
+		constructor(attr) {
+			super(attr);
+			this.gradClassName = attr.gradClassName;
+			this.favInstructor = attr.favInstructor;
 		}
 		standUp(channel){
 		console.log(`${this.name} announces to ${channel}, @channel standy times!`);
