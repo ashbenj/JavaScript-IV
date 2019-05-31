@@ -21,8 +21,8 @@ class Person {
 		}
 
 		listsSubjects() {
-			for (let i = 0; i<this.favSubjects.length; i++);{
-			console.log(`This is a list of ${this.favSubjects[i]}'s favorite subjects.`);
+			for (let i = 0; i< this.favSubjects.length; i++);{
+			console.log(`These are ${this.name}'s' favorite subjects ${this.favSubjects}.`);
 			}
 
 		}
@@ -84,7 +84,7 @@ class Person {
 		}
 
 		debugsCode(student, subject) {
-			console.log(`${name} debugs ${student.name}'s code on ${subject}.'`)
+			console.log(`${this.name} debugs ${student.name}'s code on ${subject}.'`)
 		}
 	}
 	const Jill = new ProjectManager({
